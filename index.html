@@ -1,91 +1,198 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Myntra Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra - Fashion Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation bar starts here -->
-    <header>
+    <!-- Navbar -->
+    <header class="navbar">
+
         <h2 class="logo">MYNTRA</h2>
 
         <nav>
-            <a href="#">MEN</a>
-            <a href="#">WOMEN</a>
-            <a href="#">KIDS</a>
-            <a href="#">HOME</a>
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#beauty">BEAUTY</a>
+            <a href="#home">HOME</a>
         </nav>
 
-        <!-- Search box -->
-        <input type="text" id="search" placeholder="Search products">
+        <input type="text" id="search"
+        placeholder="Search for products, brands and more">
 
-        <span>Profile</span>
-        <span>Wishlist</span>
-        <span>Bag: <b id="count">0</b></span>
+        <div class="nav-icons">
+            <span>👤<small>Profile</small></span>
+            <span>♡<small>Wishlist</small></span>
+            <span>🛍️<small>Bag <b id="count">0</b></small></span>
+        </div>
+
     </header>
 
-    <!-- Main banner section -->
+    <!-- Sale Banner -->
     <section class="banner">
-        <h1>BIG FASHION SALE</h1>
-        <p>Up to 50% OFF on Fashion</p>
-        <button onclick="shopNow()">Shop Now</button>
+
+        <div class="banner-content">
+            <p>FASHION FESTIVAL 2026</p>
+            <h1>BIG FASHION SALE</h1>
+            <h2>UP TO 50% OFF</h2>
+            <p>Discover the latest fashion trends</p>
+
+            <button onclick="shopNow()">
+                SHOP NOW →
+            </button>
+        </div>
+
     </section>
 
-    <!-- Category heading -->
+    <!-- Offer Strip -->
+    <section class="offer">
+        <h2>FLAT 50% OFF</h2>
+        <p>Limited Time Offer | Shop Your Favourite Styles</p>
+    </section>
+
+    <!-- Categories -->
     <h2 class="heading">SHOP BY CATEGORY</h2>
 
     <section class="categories">
-        <div>Men's Fashion</div>
-        <div>Women's Fashion</div>
-        <div>Kids Fashion</div>
-        <div>Footwear</div>
-    </section>
 
-    <!-- Product section -->
-    <h2 class="heading">TRENDING PRODUCTS</h2>
-
-    <section class="products">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400">
-            <h3>Casual T-Shirt</h3>
-            <p>Rs. 599</p>
-            <button onclick="addToBag()">Add to Bag</button>
+        <div class="category" id="men">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=400" alt="Men Fashion">
+            <h3>MEN</h3>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400">
-            <h3>Sports Shoes</h3>
-            <p>Rs. 1299</p>
-            <button onclick="addToBag()">Add to Bag</button>
+        <div class="category" id="women">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400" alt="Women Fashion">
+            <h3>WOMEN</h3>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400">
-            <h3>Stylish Handbag</h3>
-            <p>Rs. 999</p>
-            <button onclick="addToBag()">Add to Bag</button>
+        <div class="category" id="kids">
+            <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?w=400" alt="Kids Fashion">
+            <h3>KIDS</h3>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400">
-            <h3>Fashion Dress</h3>
-            <p>Rs. 1499</p>
-            <button onclick="addToBag()">Add to Bag</button>
+        <div class="category" id="beauty">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400" alt="Beauty">
+            <h3>BEAUTY</h3>
         </div>
 
     </section>
 
-    <!-- Footer section -->
+    <!-- Trending Products -->
+    <h2 class="heading">TRENDING NOW</h2>
+
+    <section class="products" id="products">
+
+        <div class="card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="T-shirt">
+                <span class="discount">30% OFF</span>
+            </div>
+            <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            <h3>Roadster</h3>
+            <p>Men Casual T-Shirt</p>
+            <h4>₹599 <del>₹899</del></h4>
+            <button onclick="addToBag()">ADD TO BAG</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Sports shoes">
+                <span class="discount">40% OFF</span>
+            </div>
+            <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            <h3>Nike</h3>
+            <p>Sports Shoes</p>
+            <h4>₹1299 <del>₹2199</del></h4>
+            <button onclick="addToBag()">ADD TO BAG</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Handbag">
+                <span class="discount">25% OFF</span>
+            </div>
+            <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            <h3>Lavie</h3>
+            <p>Stylish Handbag</p>
+            <h4>₹999 <del>₹1499</del></h4>
+            <button onclick="addToBag()">ADD TO BAG</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Fashion dress">
+                <span class="discount">35% OFF</span>
+            </div>
+            <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            <h3>DressBerry</h3>
+            <p>Women Fashion Dress</p>
+            <h4>₹1499 <del>₹2299</del></h4>
+            <button onclick="addToBag()">ADD TO BAG</button>
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+
+        <div>
+            <h2>🚚</h2>
+            <h3>Free Delivery</h3>
+            <p>On orders above ₹499</p>
+        </div>
+
+        <div>
+            <h2>↩️</h2>
+            <h3>Easy Returns</h3>
+            <p>Easy return policy</p>
+        </div>
+
+        <div>
+            <h2>🔒</h2>
+            <h3>Secure Payment</h3>
+            <p>100% secure shopping</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Myntra Landing Page | Created for Learning</p>
+
+        <div>
+            <h3>ONLINE SHOPPING</h3>
+            <p>Men</p>
+            <p>Women</p>
+            <p>Kids</p>
+            <p>Beauty</p>
+        </div>
+
+        <div>
+            <h3>CUSTOMER POLICIES</h3>
+            <p>Contact Us</p>
+            <p>FAQ</p>
+            <p>Returns</p>
+            <p>Privacy Policy</p>
+        </div>
+
+        <div>
+            <h3>ABOUT US</h3>
+            <p>Our Story</p>
+            <p>Careers</p>
+            <p>Fashion Trends</p>
+        </div>
+
     </footer>
 
-    <!-- JavaScript file -->
+    <div class="copyright">
+        © 2026 Myntra Style Store | Created for Learning
+    </div>
+
     <script src="script.js"></script>
 
 </body>
 </html>
+
