@@ -562,3 +562,30 @@ body {
     font-weight: bold;
     margin: 8px 0;
 }
+/* General Button Styling */
+button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Add to Bag Button */
+.card button:not(.heart) {
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+}
+
+.card button:not(.heart):hover {
+    background-color: #d62955;
+    transform: scale(1.05);
+}
+
+/* Shop Now Button */
+.banner button {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
