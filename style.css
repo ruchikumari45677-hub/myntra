@@ -516,3 +516,24 @@ footer p:hover {
 html {
     scroll-behavior: smooth;
 }
+/* Website Typography */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.heading {
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
