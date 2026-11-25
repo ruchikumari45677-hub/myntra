@@ -459,3 +459,47 @@ footer p {
 .product-img:hover img {
     transform: scale(1.08);
 }
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .categories,
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+
+}
