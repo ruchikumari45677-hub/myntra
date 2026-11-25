@@ -512,3 +512,7 @@ footer p {
 footer p:hover {
     color: #ff3f6c;
 }
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
