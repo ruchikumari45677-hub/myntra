@@ -393,3 +393,31 @@ footer p {
         width: 90%;
     }
 }
+/* Search box styling */
+#search {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5f5f6;
+}
+
+#search:focus {
+    border: 1px solid #ff3f6c;
+    background-color: white;
+}
+/* Search box styling */
+#search {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5f5f6;
+}
+
+#search:focus {
+    border: 1px solid #ff3f6c;
+    background-color: white;
+}
