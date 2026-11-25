@@ -58,3 +58,14 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+// Newsletter Subscription
+function subscribeNewsletter(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("newsletterEmail").value;
+
+    if (email) {
+        alert("Thank you for subscribing!");
+        document.getElementById("newsletterEmail").value = "";
+    }
+}
