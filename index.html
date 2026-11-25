@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Fashion Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">STYLE<span>HUB</span></div>
+
+        <nav class="navigation">
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#home">HOME</a>
+            <a href="#products">BEAUTY</a>
+        </nav>
+
+        <!-- Search -->
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput"
+                   placeholder="Search for products, brands and more">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+            <div>👤<small>Profile</small></div>
+            <div>♡<small>Wishlist</small></div>
+            <div class="bag">
+                🛍️ <span id="bagCount">0</span>
+                <small>Bag</small>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="offer">THE BIG FASHION SALE</p>
+            <h1>Fashion That<br>Defines You!</h1>
+            <p>Discover the latest trends and styles.</p>
+            <a href="#products" class="shop-btn">SHOP NOW</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+
+        <h2>SHOP BY CATEGORY</h2>
+
+        <div class="category-container">
+
+            <div class="category-card" data-category="Men" id="men">
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=500"
+                     alt="Men fashion">
+                <h3>Men</h3>
+            </div>
+
+            <div class="category-card" data-category="Women" id="women">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500"
+                     alt="Women fashion">
+                <h3>Women</h3>
+            </div>
+
+            <div class="category-card" data-category="Kids" id="kids">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500"
+                     alt="Kids fashion">
+                <h3>Kids</h3>
+            </div>
+
+            <div class="category-card" data-category="Home" id="home">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500"
+                     alt="Home decor">
+                <h3>Home & Living</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="section" id="products">
+
+        <h2>TRENDING NOW</h2>
+
+        <p id="resultMessage"></p>
+
+        <div class="product-container">
+
+            <div class="product-card"
+                 data-name="Casual Shirt" data-category="Men">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500"
+                     alt="Casual shirt">
+                <h3>Men Casual Shirt</h3>
+                <p class="price">₹899</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <button class="bag-btn">ADD TO BAG</button>
+            </div>
+
+            <div class="product-card"
+                 data-name="Women's Dress" data-category="Women">
+                <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=500"
+                     alt="Women's dress">
+                <h3>Women's Dress</h3>
+                <p class="price">₹1,499</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <button class="bag-btn">ADD TO BAG</button>
+            </div>
+
+            <div class="product-card"
+                 data-name="Sneakers" data-category="Men">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+                     alt="Sneakers">
+                <h3>Stylish Sneakers</h3>
+                <p class="price">₹1,999</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <button class="bag-btn">ADD TO BAG</button>
+            </div>
+
+            <div class="product-card"
+                 data-name="Handbag" data-category="Women">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+                     alt="Handbag">
+                <h3>Designer Handbag</h3>
+                <p class="price">₹1,299</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <button class="bag-btn">ADD TO BAG</button>
+            </div>
+
+            <div class="product-card"
+                 data-name="Kids Outfit" data-category="Kids">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500"
+                     alt="Kids outfit">
+                <h3>Kids Fashion Outfit</h3>
+                <p class="price">₹799</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <button class="bag-btn">ADD TO BAG</button>
+            </div>
+
+            <div class="product-card"
+                 data-name="Home Decor" data-category="Home">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500"
+                     alt="Home decor">
+                <h3>Home Decor</h3>
+                <p class="price">₹1,099</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <button class="bag-btn">ADD TO BAG</button>
+            </div>
+
+        </div>
+    </section>
+
+    
+<!-- Shopping Bag Section -->
+<section class="section" id="shoppingBag">
+
+    <h2>MY SHOPPING BAG</h2>
+
+    <div id="cartItems">
+        <p>Your shopping bag is empty.</p>
+    </div>
+
+    <div class="cart-summary">
+        <h3>Total: ₹<span id="cartTotal">0</span></h3>
+        <button id="checkoutBtn">PLACE ORDER</button>
+    </div>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h2>STYLEHUB</h2>
+        <p>Fashion is what you buy. Style is what you do with it.</p>
+        <p>About Us | Contact | Privacy Policy</p>
+        <p>© 2026 StyleHub. Practice Project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
