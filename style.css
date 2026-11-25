@@ -537,3 +537,21 @@ body {
     color: #666;
     font-size: 14px;
 }
+/* Back to Top Button */
+#backToTop {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #d6335b;
+    transform: translateY(-3px);
+}

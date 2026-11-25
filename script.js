@@ -1,43 +1,60 @@
 
-// Store the initial bag count
 let bagCount = 0;
 
-// Add product to bag
+// Add to Bag
 function addToBag() {
     bagCount++;
 
-    // Update bag count on screen
     document.getElementById("count").innerText = bagCount;
 
-    alert("Product added to bag!");
+    alert("Product successfully added to bag!");
 }
 
-// Shop Now button function
+// Shop Now
 function shopNow() {
-    document.querySelector(".products").scrollIntoView({
+    document.getElementById("products").scrollIntoView({
         behavior: "smooth"
     });
 }
 
-// Search products by name
+// Wishlist
+function toggleWishlist(button) {
+
+    if (button.innerText === "♡") {
+        button.innerText = "♥";
+        button.style.color = "red";
+        alert("Added to Wishlist!");
+    } else {
+        button.innerText = "♡";
+        button.style.color = "#ff3f6c";
+        alert("Removed from Wishlist!");
+    }
+}
+
+// Product Search
 document.getElementById("search").addEventListener("input", function() {
 
-    // Get the search value
-    let value = this.value.toLowerCase();
+    let searchValue = this.value.toLowerCase();
 
-    // Select all product cards
     let cards = document.querySelectorAll(".card");
 
-    // Check every product name
     cards.forEach(function(card) {
 
-        let name = card.querySelector("h3").innerText.toLowerCase();
+        let productName = card.innerText.toLowerCase();
 
-        // Show matching products
-        if (name.includes(value)) {
+        if (productName.includes(searchValue)) {
             card.style.display = "block";
         } else {
             card.style.display = "none";
         }
+
     });
+
 });
+// Back to Top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
