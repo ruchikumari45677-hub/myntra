@@ -503,3 +503,12 @@ footer p {
     }
 
 }
+/* Footer Hover Effect */
+footer p {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #ff3f6c;
+}
