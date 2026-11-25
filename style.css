@@ -555,3 +555,10 @@ body {
     background-color: #d6335b;
     transform: translateY(-3px);
 }
+/* Product Rating */
+.rating {
+    color: #f5a623;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 0;
+}
